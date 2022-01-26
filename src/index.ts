@@ -18,6 +18,7 @@ reader.readargs = {
     A1lib.mixColor(30,255,0), //Green drops
     A1lib.mixColor(102,152, 255), //Blue drops
     A1lib.mixColor(255, 128, 0), //gold drops
+    A1lib.mixColor(161, 53, 235), //purple drops
   ]
 };
 
