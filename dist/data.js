@@ -110,6 +110,10 @@ var compsList = {
     type: "common",
     qty: 0,
   },
+  "Raw manta ray": {
+    type: "common",
+    qty: 0,
+  },
   "Raw rocktail": {
     type: "common",
     qty: 0,
@@ -138,10 +142,10 @@ var compsList = {
     type: "common",
     qty: 0,
   },
-  "Grimy Kwuarm": {
-    type: "common",
-    qty: 0,
-  },
+ "Grimy Kwuarm": {
+   type: "common",
+   qty: 0,
+ },
   "Grimy lantadyme": {
     type: "common",
     qty: 0,
@@ -178,6 +182,10 @@ var compsList = {
     type: "common",
     qty: 0,
   },
+  "Uncut diamond": {
+    type: "common",
+    qty: 0,
+  },
   "Uncut dragonstone": {
     type: "common",
     qty: 0,
@@ -210,16 +218,40 @@ var compsList = {
     type: "common",
     qty: 0,
   },
-  
+  "Ciku seed": {
+    type: "common",
+    qty: 0,
+  },
+  "Lychee seed": {
+    type: "common",
+    qty: 0,
+  },
+  "Carambola seed": {
+    type: "common",
+    qty: 0,
+  },
+  "Guarana seed": {
+    type: "common",
+    qty: 0,
+  },
+  "Golden dragonfruit seed": {
+    type: "common",
+    qty: 0,
+  },
+  "Stinkshroom spore": {
+    type: "common",
+    qty: 0,
+  },
+ 
 };
 
 if (localStorage.getItem("BGHdrops") != null) {
-  tempList = JSON.parse(localStorage.mats);
-  for (x in tempList) {
-    if (!tempList[x] || !compsList[x]) {
-      continue;
-    } else {
-      compsList[x].qty = tempList[x].qty;
-    }
-  }
+ tempList = JSON.parse(localStorage.BGHdrops);
+ for (x in tempList) {
+   if (!tempList[x] || !compsList[x]) {
+     continue;
+   } else {
+     compsList[x].qty = tempList[x].qty;
+   }
+ }
 }

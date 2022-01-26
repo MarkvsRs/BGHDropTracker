@@ -14770,10 +14770,9 @@ const appColor = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0);
 let reader = new _alt1_chatbox__WEBPACK_IMPORTED_MODULE_1__["default"]();
 reader.readargs = {
     colors: [
-        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(255, 255, 255),
-        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(255, 128, 0),
-        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(255, 165, 0),
-        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(255, 0, 0), //Rare Mats
+        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(30, 255, 0),
+        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(102, 152, 255),
+        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(255, 128, 0), //gold drops
     ]
 };
 //reader.find(); //Find the chat box.
@@ -14818,16 +14817,38 @@ function readChatbox() {
     for (const a in opts) {
         chat += opts[a].text + " ";
     }
-    var comps = chat.match(/\d+ x [\w-]+( \w+)?[^\d+:]|You receive \d+ [\w-]+( \w+)?[^\d+:]/g);
-    if (comps != null && comps.length > -1)
-        actions++;
+    // if (chat.indexOf(" x ") > -1) {
+    //     count = Number(chat.match(/\d+/));
+    //     console.log(count)
+    //     let getItem = {
+    //         item: chat.match("(?<=[0-9] x )(.*)(?=\n)")[0].trim()		
+    //     };
+    //     console.log("comps1")
+    //     for (const key of Object.keys(compsList))
+    //     {
+    //             if (key == (getItem.item))
+    //                 {
+    //                 console.log("comps1.5")
+    //                 console.log(getItem.item)
+    //                 compsList[getItem.item].qty += count; //add count to index of second list.
+    //                 tidyTable();
+    //                 }
+    //                 else {
+    //                     console.warn("Invalid drop.  Ignoring.");
+    //                         continue;
+    //                 }
+    //     }
+    // }
+    var comps = chat.match(/\d+ x [\w-]+( \w+)+( \w+)+( \w+)?[^\d+:]|\d+ x [\w-]+( \w+)+( \w+)?[^\d+:]|\d+ x [\w-]+( \w+)?[^\d+:]/g
+    ///\d+ x [\w-]+( \w+)+( \w+)+( \w+)?[^\d+:]/g
+    );
     for (var x in comps) {
-        count = Number(comps[x].match(/\d+/)); //1
-        mats = comps[x].match(/[^You receive \d]\w+( \w+)?/)[0]; //Junk
-        //if (!mats.match(/parts|components|Junk/)) mats += "s";
+        comps[x].trim(); //trim off any trailing spaces
+        count = Number(comps[x].match(/\d+/)); //get drop quantity
+        mats = comps[x].match(/[^\d+ x ][\w-]+( \w+)+( \w+)+( \w+)?[^\d+:]|[^\d+ x ][\w-]+( \w+)+( \w+)?[^\d+:]|[^\d+ x ][\w-]+( \w+)?[^\d+:]/g)[0].trim(); //get just the drop name (no QTY)
         if (compsList[mats]) {
             compsList[mats].qty += count; //add count to index of second list.
-            tidyTable(mats);
+            tidyTable();
         }
         else {
             console.warn("Invalid drop.  Ignoring.");
@@ -14848,8 +14869,8 @@ function buildTable() {
         }
     }
 }
-function tidyTable(flashRow) {
-    localStorage.mats = JSON.stringify(compsList);
+function tidyTable() {
+    localStorage.BGHdrops = JSON.stringify(compsList);
     for (const x in compsList) {
         jquery__WEBPACK_IMPORTED_MODULE_2__(`[data-name='${x}'] > .qty`).text(compsList[x].qty);
         if (compsList[x].qty === 0) {
@@ -14869,7 +14890,7 @@ function tidyTable(flashRow) {
     jquery__WEBPACK_IMPORTED_MODULE_2__(".actions").text(actions);
 }
 buildTable();
-tidyTable(mats);
+tidyTable();
 jquery__WEBPACK_IMPORTED_MODULE_2__(".edit").change(function () {
     if (jquery__WEBPACK_IMPORTED_MODULE_2__(this).is(":checked")) {
         if (jquery__WEBPACK_IMPORTED_MODULE_2__(".tracker").text() == "Stop") {
@@ -14887,7 +14908,7 @@ jquery__WEBPACK_IMPORTED_MODULE_2__(".edit").change(function () {
         for (const x in compsList) {
             compsList[x].qty = parseInt(jquery__WEBPACK_IMPORTED_MODULE_2__(`[data-name='${x}'] .qty`).text());
         }
-        tidyTable(mats);
+        tidyTable();
     }
 });
 jquery__WEBPACK_IMPORTED_MODULE_2__("button.tracker")

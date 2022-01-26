@@ -15,10 +15,9 @@ const appColor = A1lib.mixColor(0, 255, 0);
 let reader = new Chatbox.default();
 reader.readargs = {
   colors: [
-    A1lib.mixColor(255, 255, 255), //Common Mats
-    A1lib.mixColor(255, 128, 0), //Uncommon Mats
-    A1lib.mixColor(255, 165, 0), //Scavenging comps
-    A1lib.mixColor(255, 0, 0), //Rare Mats
+    A1lib.mixColor(30,255,0), //Green drops
+    A1lib.mixColor(102,152, 255), //Blue drops
+    A1lib.mixColor(255, 128, 0), //gold drops
   ]
 };
 
@@ -85,22 +84,55 @@ function readChatbox() {
     chat += opts[a].text + " ";
   }
 
-  var comps = chat.match(
-    /\d+ x [\w-]+( \w+)?[^\d+:]|You receive \d+ [\w-]+( \w+)?[^\d+:]/g
-  );
-  if (comps != null && comps.length > -1) actions++;
-  for (var x in comps) {
-    count = Number(comps[x].match(/\d+/)); //1
-    mats = comps[x].match(/[^You receive \d]\w+( \w+)?/)[0]; //Junk
-    //if (!mats.match(/parts|components|Junk/)) mats += "s";
-    if (compsList[mats]) {
-      compsList[mats].qty += count; //add count to index of second list.
-      tidyTable(mats);
-    } else {
-      console.warn("Invalid drop.  Ignoring.");
-      continue;
-    }
-  }
+	// if (chat.indexOf(" x ") > -1) {
+        
+    //     count = Number(chat.match(/\d+/));
+
+    //     console.log(count)
+    //     let getItem = {
+    //         item: chat.match("(?<=[0-9] x )(.*)(?=\n)")[0].trim()		
+    //     };
+    //     console.log("comps1")
+
+    //     for (const key of Object.keys(compsList))
+    //     {
+            
+    //             if (key == (getItem.item))
+    //                 {
+                        
+    //                 console.log("comps1.5")
+    //                 console.log(getItem.item)
+    //                 compsList[getItem.item].qty += count; //add count to index of second list.
+    //                 tidyTable();
+    //                 }
+    //                 else {
+    //                     console.warn("Invalid drop.  Ignoring.");
+    //                         continue;
+    //                 }
+    //     }
+    // }
+
+
+    var comps = chat.match(
+        /\d+ x [\w-]+( \w+)+( \w+)+( \w+)?[^\d+:]|\d+ x [\w-]+( \w+)+( \w+)?[^\d+:]|\d+ x [\w-]+( \w+)?[^\d+:]/g
+        ///\d+ x [\w-]+( \w+)+( \w+)+( \w+)?[^\d+:]/g
+      );
+      
+      for (var x in comps) {
+        comps[x].trim() //trim off any trailing spaces
+        count = Number(comps[x].match(/\d+/)); //get drop quantity
+        mats = comps[x].match( /[^\d+ x ][\w-]+( \w+)+( \w+)+( \w+)?[^\d+:]|[^\d+ x ][\w-]+( \w+)+( \w+)?[^\d+:]|[^\d+ x ][\w-]+( \w+)?[^\d+:]/g)[0].trim(); //get just the drop name (no QTY)
+        
+  
+        if (compsList[mats]) {
+          compsList[mats].qty += count; //add count to index of second list.
+          tidyTable();
+        } else {
+          console.warn("Invalid drop.  Ignoring.");
+          continue;
+        }
+      }
+
 }
 
 function buildTable() {
@@ -129,8 +161,9 @@ function buildTable() {
   }
 }
 
-function tidyTable(flashRow) {
-  localStorage.mats = JSON.stringify(compsList);
+function tidyTable() {
+    
+  localStorage.BGHdrops = JSON.stringify(compsList);
   for (const x in compsList) {
     $(`[data-name='${x}'] > .qty`).text(compsList[x].qty);
     if (compsList[x].qty === 0) {
@@ -156,7 +189,7 @@ function tidyTable(flashRow) {
 
 
 buildTable();
-tidyTable(mats);
+tidyTable();
 
 $(".edit").change(function () {
   if ($(this).is(":checked")) {
@@ -174,7 +207,7 @@ $(".edit").change(function () {
     for (const x in compsList) {
       compsList[x].qty = parseInt($(`[data-name='${x}'] .qty`).text());
     }
-    tidyTable(mats);
+    tidyTable();
   }
 });
 
