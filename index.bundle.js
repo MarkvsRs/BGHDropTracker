@@ -14773,7 +14773,7 @@ reader.readargs = {
         _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(30, 255, 0),
         _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(102, 152, 255),
         _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(255, 128, 0),
-        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(161, 53, 235), //purple drops
+        _alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(163, 53, 238), //purple drops
     ]
 };
 //reader.find(); //Find the chat box.
