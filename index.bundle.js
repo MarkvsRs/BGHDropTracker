@@ -360,18 +360,18 @@ if (typeof HTMLImageElement != "undefined") {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "imageDataFromUrl": () => (/* binding */ imageDataFromUrl),
+/* harmony export */   "ImageDataSet": () => (/* binding */ ImageDataSet),
+/* harmony export */   "asyncMap": () => (/* binding */ asyncMap),
+/* harmony export */   "clearPngColorspace": () => (/* binding */ clearPngColorspace),
+/* harmony export */   "coldif": () => (/* binding */ coldif),
+/* harmony export */   "findSubbuffer": () => (/* binding */ findSubbuffer),
+/* harmony export */   "findSubimage": () => (/* binding */ findSubimage),
 /* harmony export */   "imageDataFromBase64": () => (/* binding */ imageDataFromBase64),
 /* harmony export */   "imageDataFromFileBuffer": () => (/* binding */ imageDataFromFileBuffer),
+/* harmony export */   "imageDataFromUrl": () => (/* binding */ imageDataFromUrl),
 /* harmony export */   "isPngBuffer": () => (/* binding */ isPngBuffer),
-/* harmony export */   "clearPngColorspace": () => (/* binding */ clearPngColorspace),
-/* harmony export */   "findSubimage": () => (/* binding */ findSubimage),
-/* harmony export */   "findSubbuffer": () => (/* binding */ findSubbuffer),
 /* harmony export */   "simpleCompare": () => (/* binding */ simpleCompare),
-/* harmony export */   "coldif": () => (/* binding */ coldif),
-/* harmony export */   "asyncMap": () => (/* binding */ asyncMap),
-/* harmony export */   "webpackImages": () => (/* binding */ webpackImages),
-/* harmony export */   "ImageDataSet": () => (/* binding */ ImageDataSet)
+/* harmony export */   "webpackImages": () => (/* binding */ webpackImages)
 /* harmony export */ });
 /* harmony import */ var _imgref_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imgref.js */ "../node_modules/@alt1/base/dist/imgref.js");
 /* harmony import */ var _wrapper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapper.js */ "../node_modules/@alt1/base/dist/wrapper.js");
@@ -734,8 +734,8 @@ class ImageDataSet {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ImgRef": () => (/* binding */ ImgRef),
-/* harmony export */   "ImgRefCtx": () => (/* binding */ ImgRefCtx),
 /* harmony export */   "ImgRefBind": () => (/* binding */ ImgRefBind),
+/* harmony export */   "ImgRefCtx": () => (/* binding */ ImgRefCtx),
 /* harmony export */   "ImgRefData": () => (/* binding */ ImgRefData)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
@@ -842,18 +842,18 @@ class ImgRefData extends ImgRef {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ImageDetect": () => (/* reexport module object */ _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__),
-/* harmony export */   "PasteInput": () => (/* reexport module object */ _pasteinput_js__WEBPACK_IMPORTED_MODULE_2__),
-/* harmony export */   "Rect": () => (/* reexport safe */ _rect_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "Alt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.Alt1Error),
 /* harmony export */   "ImageData": () => (/* reexport safe */ _imagedata_extensions_js__WEBPACK_IMPORTED_MODULE_4__.ImageData),
-/* harmony export */   "NodePolyfill": () => (/* reexport module object */ _nodepolyfill_js__WEBPACK_IMPORTED_MODULE_5__),
+/* harmony export */   "ImageDetect": () => (/* reexport module object */ _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__),
+/* harmony export */   "ImageStreamReader": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.ImageStreamReader),
 /* harmony export */   "ImgRef": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRef),
 /* harmony export */   "ImgRefBind": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefBind),
 /* harmony export */   "ImgRefCtx": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefCtx),
 /* harmony export */   "ImgRefData": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefData),
-/* harmony export */   "Alt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.Alt1Error),
-/* harmony export */   "ImageStreamReader": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.ImageStreamReader),
 /* harmony export */   "NoAlt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.NoAlt1Error),
+/* harmony export */   "NodePolyfill": () => (/* reexport module object */ _nodepolyfill_js__WEBPACK_IMPORTED_MODULE_5__),
+/* harmony export */   "PasteInput": () => (/* reexport module object */ _pasteinput_js__WEBPACK_IMPORTED_MODULE_2__),
+/* harmony export */   "Rect": () => (/* reexport safe */ _rect_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
 /* harmony export */   "addResizeElement": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.addResizeElement),
 /* harmony export */   "capture": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.capture),
 /* harmony export */   "captureAsync": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureAsync),
@@ -911,15 +911,15 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "polyfillRequire": () => (/* binding */ polyfillRequire),
-/* harmony export */   "requireSharp": () => (/* binding */ requireSharp),
-/* harmony export */   "requireNodeCanvas": () => (/* binding */ requireNodeCanvas),
-/* harmony export */   "requireElectronCommon": () => (/* binding */ requireElectronCommon),
-/* harmony export */   "imageDataToDrawable": () => (/* binding */ imageDataToDrawable),
 /* harmony export */   "createCanvas": () => (/* binding */ createCanvas),
-/* harmony export */   "imageDataToFileBytes": () => (/* binding */ imageDataToFileBytes),
 /* harmony export */   "imageDataFromBase64": () => (/* binding */ imageDataFromBase64),
-/* harmony export */   "imageDataFromBuffer": () => (/* binding */ imageDataFromBuffer)
+/* harmony export */   "imageDataFromBuffer": () => (/* binding */ imageDataFromBuffer),
+/* harmony export */   "imageDataToDrawable": () => (/* binding */ imageDataToDrawable),
+/* harmony export */   "imageDataToFileBytes": () => (/* binding */ imageDataToFileBytes),
+/* harmony export */   "polyfillRequire": () => (/* binding */ polyfillRequire),
+/* harmony export */   "requireElectronCommon": () => (/* binding */ requireElectronCommon),
+/* harmony export */   "requireNodeCanvas": () => (/* binding */ requireNodeCanvas),
+/* harmony export */   "requireSharp": () => (/* binding */ requireSharp)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imagedetect.js */ "../node_modules/@alt1/base/dist/imagedetect.js");
@@ -1086,13 +1086,13 @@ function imageDataFromBuffer(buffer) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fileDialog": () => (/* binding */ fileDialog),
 /* harmony export */   "lastref": () => (/* binding */ lastref),
 /* harmony export */   "listen": () => (/* binding */ listen),
-/* harmony export */   "unlisten": () => (/* binding */ unlisten),
-/* harmony export */   "triggerPaste": () => (/* binding */ triggerPaste),
-/* harmony export */   "startDragNDrop": () => (/* binding */ startDragNDrop),
 /* harmony export */   "start": () => (/* binding */ start),
-/* harmony export */   "fileDialog": () => (/* binding */ fileDialog)
+/* harmony export */   "startDragNDrop": () => (/* binding */ startDragNDrop),
+/* harmony export */   "triggerPaste": () => (/* binding */ triggerPaste),
+/* harmony export */   "unlisten": () => (/* binding */ unlisten)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imagedetect.js */ "../node_modules/@alt1/base/dist/imagedetect.js");
@@ -1411,35 +1411,35 @@ class Rect {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "NoAlt1Error": () => (/* binding */ NoAlt1Error),
 /* harmony export */   "Alt1Error": () => (/* binding */ Alt1Error),
-/* harmony export */   "newestversion": () => (/* binding */ newestversion),
-/* harmony export */   "hasAlt1": () => (/* binding */ hasAlt1),
-/* harmony export */   "skinName": () => (/* binding */ skinName),
-/* harmony export */   "openbrowser": () => (/* binding */ openbrowser),
-/* harmony export */   "requireAlt1": () => (/* binding */ requireAlt1),
-/* harmony export */   "getdisplaybounds": () => (/* binding */ getdisplaybounds),
+/* harmony export */   "ImageStreamReader": () => (/* binding */ ImageStreamReader),
+/* harmony export */   "NoAlt1Error": () => (/* binding */ NoAlt1Error),
+/* harmony export */   "addResizeElement": () => (/* binding */ addResizeElement),
 /* harmony export */   "capture": () => (/* binding */ capture),
+/* harmony export */   "captureAsync": () => (/* binding */ captureAsync),
 /* harmony export */   "captureHold": () => (/* binding */ captureHold),
-/* harmony export */   "captureHoldScreen": () => (/* binding */ captureHoldScreen),
 /* harmony export */   "captureHoldFullRs": () => (/* binding */ captureHoldFullRs),
-/* harmony export */   "transferImageData": () => (/* binding */ transferImageData),
+/* harmony export */   "captureHoldScreen": () => (/* binding */ captureHoldScreen),
+/* harmony export */   "captureMultiAsync": () => (/* binding */ captureMultiAsync),
+/* harmony export */   "captureStream": () => (/* binding */ captureStream),
 /* harmony export */   "decodeImageString": () => (/* binding */ decodeImageString),
 /* harmony export */   "encodeImageString": () => (/* binding */ encodeImageString),
-/* harmony export */   "mixColor": () => (/* binding */ mixColor),
-/* harmony export */   "unmixColor": () => (/* binding */ unmixColor),
-/* harmony export */   "identifyApp": () => (/* binding */ identifyApp),
-/* harmony export */   "resetEnvironment": () => (/* binding */ resetEnvironment),
-/* harmony export */   "hasAlt1Version": () => (/* binding */ hasAlt1Version),
 /* harmony export */   "getMousePosition": () => (/* binding */ getMousePosition),
-/* harmony export */   "addResizeElement": () => (/* binding */ addResizeElement),
+/* harmony export */   "getdisplaybounds": () => (/* binding */ getdisplaybounds),
+/* harmony export */   "hasAlt1": () => (/* binding */ hasAlt1),
+/* harmony export */   "hasAlt1Version": () => (/* binding */ hasAlt1Version),
+/* harmony export */   "identifyApp": () => (/* binding */ identifyApp),
+/* harmony export */   "mixColor": () => (/* binding */ mixColor),
+/* harmony export */   "newestversion": () => (/* binding */ newestversion),
 /* harmony export */   "on": () => (/* binding */ on),
-/* harmony export */   "removeListener": () => (/* binding */ removeListener),
 /* harmony export */   "once": () => (/* binding */ once),
-/* harmony export */   "ImageStreamReader": () => (/* binding */ ImageStreamReader),
-/* harmony export */   "captureAsync": () => (/* binding */ captureAsync),
-/* harmony export */   "captureMultiAsync": () => (/* binding */ captureMultiAsync),
-/* harmony export */   "captureStream": () => (/* binding */ captureStream)
+/* harmony export */   "openbrowser": () => (/* binding */ openbrowser),
+/* harmony export */   "removeListener": () => (/* binding */ removeListener),
+/* harmony export */   "requireAlt1": () => (/* binding */ requireAlt1),
+/* harmony export */   "resetEnvironment": () => (/* binding */ resetEnvironment),
+/* harmony export */   "skinName": () => (/* binding */ skinName),
+/* harmony export */   "transferImageData": () => (/* binding */ transferImageData),
+/* harmony export */   "unmixColor": () => (/* binding */ unmixColor)
 /* harmony export */ });
 /* harmony import */ var _rect_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rect.js */ "../node_modules/@alt1/base/dist/rect.js");
 /* harmony import */ var _imgref_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imgref.js */ "../node_modules/@alt1/base/dist/imgref.js");
@@ -2109,23 +2109,33 @@ module.exports = {"chars":[{"width":13,"bonus":455,"chr":"a","pixels":[1,12,233,
 
 /***/ }),
 
-/***/ "../node_modules/@alt1/chatbox/dist/imgs/badgebroadcast.js":
-/*!*****************************************************************!*\
-  !*** ../node_modules/@alt1/chatbox/dist/imgs/badgebroadcast.js ***!
-  \*****************************************************************/
+/***/ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_bronze.js":
+/*!*************************************************************************!*\
+  !*** ../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_bronze.js ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAA2UExURQAAAAsICCEdHMZ8dappYgAAAVg0VYpLRWAsKIZ/fn9ANUolG9CHhTAUEjAgF1MyL/WkmQAAAO2GLvsAAAASdFJOU///////////////////////AOK/vxIAAAAJbm9QRQAAAAAAAAAAAKGKctUAAABJSURBVBhXPcpBEoAwCATBrIIQCDH8/7NiqnROfZiWf5vAx+OkY5MvEhFFNhBx7yyGovMYHMWcd6wVHvXCTF3ft0hz2mZC3R2ZD/YEBDE74WVXAAAAAElFTkSuQmCC")
+
+/***/ }),
+
+/***/ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_gold.js":
+/*!***********************************************************************!*\
+  !*** ../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_gold.js ***!
+  \***********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAAzUExURQAAAAsICKyWbaCGWgAAAWtiTzAgF11CIIdmNjIrICEdHNukUc+cJXpWKUolG39ANQAAAPj2qJUAAAARdFJOU/////////////////////8AJa2ZYgAAAAlub1BFAAAAAAAAAAAAoYpy1QAAAE5JREFUGFc9jEsWgDAIA/mkQFup3P+0oguzmuS9DNWfRhYR5Rehw8wDRRg2RedyEGTo3tEzcSD2lXCmco/MPKdvK63j65Xh5D3xebs0VD3I+wPSC+2UNgAAAABJRU5ErkJggg==")
 
 /***/ }),
 
-/***/ "../node_modules/@alt1/chatbox/dist/imgs/badgedrop.js":
-/*!************************************************************!*\
-  !*** ../node_modules/@alt1/chatbox/dist/imgs/badgedrop.js ***!
-  \************************************************************/
+/***/ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_silver.js":
+/*!*************************************************************************!*\
+  !*** ../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_silver.js ***!
+  \*************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAA2UExURQAAAAsICCEdHMZ8dappYgAAAVg0VYpLRWAsKIZ/fn9ANUolG9CHhTAUEjAgF1MyL/WkmQAAAO2GLvsAAAASdFJOU///////////////////////AOK/vxIAAAAJbm9QRQAAAAAAAAAAAKGKctUAAABJSURBVBhXPcpBEoAwCATBrIIQCDH8/7NiqnROfZiWf5vAx+OkY5MvEhFFNhBx7yyGovMYHMWcd6wVHvXCTF3ft0hz2mZC3R2ZD/YEBDE74WVXAAAAAElFTkSuQmCC")
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAAwUExURQAAAAsICCEdHJaWlgAAAUZHR2ZmZlpVVzs8OoZ/fq2trdPT08bGxzAwL+Dg4AAAADwgKvoAAAAQdFJOU////////////////////wDgI10ZAAAACW5vUEUAAAAAAAAAAAChinLVAAAASklEQVQYVz3MSQ6AMAwDwOxJS03+/1tKJfBpZFmm/nPI/FFU5dA8IrKsycZkVRtpxBHzWupu1Ki6F0T2ljO9dnk4gHB+z6QAcPcD17YDp+hpqhwAAAAASUVORK5CYII=")
 
 /***/ }),
 
@@ -2298,8 +2308,8 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "defaultcolors": () => (/* binding */ defaultcolors),
-/* harmony export */   "default": () => (/* binding */ ChatBoxReader)
+/* harmony export */   "default": () => (/* binding */ ChatBoxReader),
+/* harmony export */   "defaultcolors": () => (/* binding */ defaultcolors)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _alt1_ocr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/ocr */ "../node_modules/@alt1/ocr/dist/index.js");
@@ -2309,13 +2319,13 @@ __webpack_require__.r(__webpack_exports__);
 
 let chatfont = __webpack_require__(/*! @alt1/ocr/fonts/chat_8px.js */ "../node_modules/@alt1/ocr/fonts/chat_8px.js");
 let fonts = [
-    { name: "10pt", lineheight: 14, badgey: -9, dy: -1, def: __webpack_require__(/*! ./fonts/10pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/10pt.js") },
-    { name: "12pt", lineheight: 16, badgey: -9, dy: -5, def: __webpack_require__(/*! ./fonts/12pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/12pt.js") },
-    { name: "14pt", lineheight: 18, badgey: -10, dy: -7, def: __webpack_require__(/*! ./fonts/14pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/14pt.js") },
-    { name: "16pt", lineheight: 21, badgey: -10, dy: -11, def: __webpack_require__(/*! ./fonts/16pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/16pt.js") },
-    { name: "18pt", lineheight: 23, badgey: -12, dy: -13, def: __webpack_require__(/*! ./fonts/18pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/18pt.js") },
-    { name: "20pt", lineheight: 25, badgey: -13, dy: -17, def: __webpack_require__(/*! ./fonts/20pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/20pt.js") },
-    { name: "22pt", lineheight: 27, badgey: -14, dy: -19, def: __webpack_require__(/*! ./fonts/22pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/22pt.js") },
+    { name: "10pt", lineheight: 14, badgey: -9, dy: 2, def: __webpack_require__(/*! ./fonts/10pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/10pt.js") },
+    { name: "12pt", lineheight: 16, badgey: -9, dy: -1, def: __webpack_require__(/*! ./fonts/12pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/12pt.js") },
+    { name: "14pt", lineheight: 18, badgey: -10, dy: -3, def: __webpack_require__(/*! ./fonts/14pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/14pt.js") },
+    { name: "16pt", lineheight: 21, badgey: -10, dy: -6, def: __webpack_require__(/*! ./fonts/16pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/16pt.js") },
+    { name: "18pt", lineheight: 23, badgey: -11, dy: -8, def: __webpack_require__(/*! ./fonts/18pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/18pt.js") },
+    { name: "20pt", lineheight: 25, badgey: -11, dy: -11, def: __webpack_require__(/*! ./fonts/20pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/20pt.js") },
+    { name: "22pt", lineheight: 27, badgey: -12, dy: -13, def: __webpack_require__(/*! ./fonts/22pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/22pt.js") },
 ];
 const imgs = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackImages({
     plusbutton: __webpack_require__(/*! ./imgs/plusbutton.js */ "../node_modules/@alt1/chatbox/dist/imgs/plusbutton.js"),
@@ -2334,8 +2344,9 @@ const chatbadges = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackIm
     vip: __webpack_require__(/*! ./imgs/badgevip.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgevip.js"),
     pmod: __webpack_require__(/*! ./imgs/badgepmod.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgepmod.js"),
     pmodvip: __webpack_require__(/*! ./imgs/badgepmodvip.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgepmodvip.js"),
-    broadcast: __webpack_require__(/*! ./imgs/badgebroadcast.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgebroadcast.js"),
-    drop: __webpack_require__(/*! ./imgs/badgedrop.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgedrop.js"),
+    broadcast_gold: __webpack_require__(/*! ./imgs/badge_broadcast_gold.js */ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_gold.js"),
+    broadcast_silver: __webpack_require__(/*! ./imgs/badge_broadcast_silver.js */ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_silver.js"),
+    broadcast_bronze: __webpack_require__(/*! ./imgs/badge_broadcast_bronze.js */ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_bronze.js"),
     ironman: __webpack_require__(/*! ./imgs/badgeironman.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgeironman.js"),
     hcim: __webpack_require__(/*! ./imgs/badgehcim.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgehcim.js")
 });
@@ -2343,8 +2354,9 @@ const badgemap = {
     vip: "\u2730",
     pmod: "\u2655",
     pmodvip: "\u2655",
-    broadcast: "\u2746",
-    drop: "\u2746",
+    broadcast_gold: "\u2746",
+    broadcast_silver: "\u2746",
+    broadcast_bronze: "\u2746",
     ironman: "\u26AF",
     hcim: "\u{1F480}", //SKULL
 };
@@ -2917,24 +2929,24 @@ let defaultbackwardnudges = [
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "debug": () => (/* binding */ debug),
-/* harmony export */   "debugout": () => (/* binding */ debugout),
-/* harmony export */   "debugFont": () => (/* binding */ debugFont),
-/* harmony export */   "unblendBlackBackground": () => (/* binding */ unblendBlackBackground),
-/* harmony export */   "unblendKnownBg": () => (/* binding */ unblendKnownBg),
-/* harmony export */   "unblendTrans": () => (/* binding */ unblendTrans),
+/* harmony export */   "GetChatColorMono": () => (/* binding */ GetChatColorMono),
 /* harmony export */   "canblend": () => (/* binding */ canblend),
+/* harmony export */   "debug": () => (/* binding */ debug),
+/* harmony export */   "debugFont": () => (/* binding */ debugFont),
+/* harmony export */   "debugout": () => (/* binding */ debugout),
 /* harmony export */   "decompose2col": () => (/* binding */ decompose2col),
-/* harmony export */   "decomposeblack": () => (/* binding */ decomposeblack),
 /* harmony export */   "decompose3col": () => (/* binding */ decompose3col),
+/* harmony export */   "decomposeblack": () => (/* binding */ decomposeblack),
 /* harmony export */   "findChar": () => (/* binding */ findChar),
 /* harmony export */   "findReadLine": () => (/* binding */ findReadLine),
-/* harmony export */   "GetChatColorMono": () => (/* binding */ GetChatColorMono),
+/* harmony export */   "generatefont": () => (/* binding */ generatefont),
 /* harmony export */   "getChatColor": () => (/* binding */ getChatColor),
+/* harmony export */   "readChar": () => (/* binding */ readChar),
 /* harmony export */   "readLine": () => (/* binding */ readLine),
 /* harmony export */   "readSmallCapsBackwards": () => (/* binding */ readSmallCapsBackwards),
-/* harmony export */   "readChar": () => (/* binding */ readChar),
-/* harmony export */   "generatefont": () => (/* binding */ generatefont)
+/* harmony export */   "unblendBlackBackground": () => (/* binding */ unblendBlackBackground),
+/* harmony export */   "unblendKnownBg": () => (/* binding */ unblendKnownBg),
+/* harmony export */   "unblendTrans": () => (/* binding */ unblendTrans)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 
